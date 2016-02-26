@@ -41,7 +41,7 @@ def make_session(token=None, state=None, scope=None):
 def index():
     scope = request.args.get(
         'scope',
-        'identify email onnections guilds guilds.join')
+        'identify email connections guilds guilds.join')
     discord = make_session(scope=scope.split(' '))
     authorization_url, state = discord.authorization_url(AUTHORIZATION_BASE_URL)
     session['oauth2_state'] = state
