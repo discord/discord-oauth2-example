@@ -23,3 +23,11 @@ curl -H 'Authorization: NTQyODIxMDE1Njg.CaxN7w.tDYbyBKDbwox_yQo' \
 - `pip install -r requirements.txt`
 - `OAUTH2_CLIENT_ID=152638009253036032 OAUTH2_CLIENT_SECRET=p6KNMamrU5OVWtZiFe2kSkhx3Amxm0xB python app.py`
 - `open http://localhost:3000`
+
+# Scopes
+
+- **identify** allows `/users/@me` without `email`.
+- **email** makes `/users/@me` return an `email`.
+- **connections** allows `/users/@me/connections` to return linked Twitch and YouTube accounts.
+- **guilds** allows `/users/@me/guilds` to return basic information about all of a user's guilds (servers).
+- **guilds.join** allows `/invite/<code>` to be used to join a guild (server) with an instant invite.
