@@ -22,7 +22,7 @@ Save the `id` and `secret` to use in OAuth2 libraries as `client_id` and `client
 }
 ```
 
-If you want to update the application then you can `PATCH` to `https://discordapp.com/api/oauth2/applications/<id>` endpoint. You must include the whole object except `secret`. Icon may be set using a data-uri like the user avatar and guild icon endpoints.
+If you want to update the application then you can `PUT` to `https://discordapp.com/api/oauth2/applications/<id>` endpoint. You must include the whole object except `id` and `secret`. Icon may be set using a data-uri like the user avatar and guild icon endpoints.
 
 # Run
 
