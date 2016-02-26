@@ -19,7 +19,7 @@ if 'http://' in OAUTH2_REDIRECT_URI:
 
 
 def token_updater(token):
-    session['oauth_token'] = token
+    session['oauth2_token'] = token
 
 
 def make_session(token=None, state=None):
