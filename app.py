@@ -22,12 +22,12 @@ def token_updater(token):
     session['oauth2_token'] = token
 
 
-def make_session(token=None, state=None):
+def make_session(token=None, state=None, scope=None):
     return OAuth2Session(
         client_id=OAUTH2_CLIENT_ID,
         token=token,
         state=state,
-        scope=('identify', 'email', 'connections', 'guilds', 'guilds.join'),
+        scope=scope,
         redirect_uri=OAUTH2_REDIRECT_URI,
         auto_refresh_kwargs={
             'client_id': OAUTH2_CLIENT_ID,
@@ -39,7 +39,10 @@ def make_session(token=None, state=None):
 
 @app.route('/')
 def index():
-    discord = make_session()
+    scope = request.args.get(
+        'scope',
+        'identify email onnections guilds guilds.join')
+    discord = make_session(scope=scope.split(' '))
     authorization_url, state = discord.authorization_url(AUTHORIZATION_BASE_URL)
     session['oauth2_state'] = state
     return redirect(authorization_url)
