@@ -7,7 +7,7 @@ curl -H 'Authorization: NTQyODIxMDE1Njg.CaxN7w.tDYbyBKDbwox_yQo' \
      https://discordapp.com/api/oauth2/applications
 ```
 
-```
+```json
 {
   "id": "152638009253036032",
   "name": "OAuth2 Test",
@@ -20,6 +20,6 @@ curl -H 'Authorization: NTQyODIxMDE1Njg.CaxN7w.tDYbyBKDbwox_yQo' \
 
 # Run
 
-`pip install -r requirements.txt`
-`OAUTH2_CLIENT_ID=152638009253036032 OAUTH2_CLIENT_SECRET=p6KNMamrU5OVWtZiFe2kSkhx3Amxm0xB python app.py`
-`open http://localhost:3000`
+- `pip install -r requirements.txt`
+- `OAUTH2_CLIENT_ID=152638009253036032 OAUTH2_CLIENT_SECRET=p6KNMamrU5OVWtZiFe2kSkhx3Amxm0xB python app.py`
+- `open http://localhost:3000`
