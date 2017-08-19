@@ -1,15 +1,6 @@
 # Create Application
 
-While the API/Documentation site is not released. An application must be created manually. Grab your `Authorization` header by using Chrome's Web Inspector and make an API request as yourself.
-
-```
-curl -H 'Authorization: NTQyODIxMDE1Njg.CaxN7w.tDYbyBKDbwox_yQo' \
-     -H "Content-Type: application/json" \
-     -X POST -d '{"name": "OAuth2 Test", "redirect_uris": ["http://localhost:5000/callback"]}' \
-     https://discordapp.com/api/oauth2/applications
-```
-
-Save the `id` and `secret` to use in OAuth2 libraries as `client_id` and `client_secret`.
+Head over to our [developer site](https://discordapp.com/developers/applications/me) to create an application, and then save the `client id` and `client secret` to use in OAuth2 libraries as `client_id` and `client_secret`.
 
 ```json
 {
