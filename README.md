@@ -27,4 +27,4 @@ If you want to update the application then you can `PUT` to `https://discordapp.
 - **email** makes `/users/@me` return an `email`.
 - **connections** allows `/users/@me/connections` to return linked Twitch and YouTube accounts.
 - **guilds** allows `/users/@me/guilds` to return basic information about all of a user's guilds (servers).
-- **guilds.join** allows `/invites/<code>` to be used to join a guild (server) with an instant invite.
+- **guilds.join** allows `/guilds/<guild_id>/members/<user_id>` to be used to join a guild (server).
